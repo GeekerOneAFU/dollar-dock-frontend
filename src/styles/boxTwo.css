@@ -1,0 +1,62 @@
+.boxTwo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content;
+  height: auto;
+  padding: 7px 10px;
+  opacity: 0.82;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  border-bottom: 2px solid transparent;
+}
+
+.boxTwo::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #444444;
+  transition: width 0.3s ease;
+}
+
+.boxTwo:hover::after {
+  width: 100%;
+}
+
+.boxTwo.active,
+.boxTwo.active:hover {
+  opacity: 1;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.04);
+  border-radius: 25px;
+  border-bottom: none;
+}
+
+.boxTwo.active::after,
+.boxTwo.active:hover::after {
+  opacity: 1;
+  color: /* #fee0bf */ #000;
+  background-color: transparent;
+  border-radius: 10px;
+  border-bottom: none;
+}
+
+.boxTwo.active::before {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 12px 12px 0;
+  border-style: solid;
+  border-color: var(--box-two-pointy-color) transparent;
+}
