@@ -7,6 +7,20 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaUnlockKeyhole, FaRegUser, FaAt, FaRightToBracket, FaGoogle } from 'react-icons/fa6';
 import { MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
+import OuterAppContainer from '../components/OuterAppContainer';
+import { motion } from 'framer-motion';
+
+const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+        opacity: 1,
+            y: 0,
+            transition: {
+             type: "spring",
+            stiffness: 50,
+        },
+    },
+};
 
 const Signup = () => {
 
@@ -104,9 +118,13 @@ const Signup = () => {
     }
 
     return (
-        <div className="outer-app-container">
-            <img src="/logo.png" alt="login image" />
-            <div className="outer-app-box">
+        <OuterAppContainer>
+            <motion.img
+                src="/logo.png"
+                alt="logo image"
+                variants={itemVariants}
+            />
+            <motion.div className="outer-app-box" variants={itemVariants}>
                 <div className="outer-app-box-header">
                     <h1>Sign-up</h1>
                 </div>
@@ -198,8 +216,8 @@ const Signup = () => {
                         <Link className="link" to="/support">Support</Link>.
                     </p>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </OuterAppContainer>
     );
 };
 

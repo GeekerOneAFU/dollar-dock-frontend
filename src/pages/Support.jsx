@@ -6,6 +6,20 @@ import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaRegStar, FaAt, FaRegUser, FaAnglesRight, FaRegMessage } from 'react-icons/fa6'
+import OuterAppContainer from '../components/OuterAppContainer';
+import { motion } from 'framer-motion';
+
+const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+        opacity: 1,
+            y: 0,
+            transition: {
+             type: "spring",
+            stiffness: 50,
+        },
+    },
+};
 
 const Support = () => {
     const { user, login } = useAuth();
@@ -77,9 +91,13 @@ const Support = () => {
     }
 
     return (
-        <div className="outer-app-container">
-            <img src="/logo.png" alt="login image" />
-            <div className="outer-app-box">
+        <OuterAppContainer>
+            <motion.img
+                src="/logo.png"
+                alt="logo image"
+                variants={itemVariants}
+            />
+            <motion.div className="outer-app-box" variants={itemVariants}>
                 <div className="outer-app-box-header">
                     <h1>Talk to support</h1>
                 </div>
@@ -160,8 +178,8 @@ const Support = () => {
                         A support ticket will be created. And one of our team members will reach out to you shortly.
                     </p>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </OuterAppContainer>
     );
 };
 

@@ -2,7 +2,7 @@ const NotificationContent = () => {
 
     return (
         <div className="row">
-            <h1>Notification <span>The system is upto date.</span></h1>
+            <h1>Notifications <span>The system is upto date.</span></h1>
         </div>
     )
 }

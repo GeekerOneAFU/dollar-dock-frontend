@@ -28,23 +28,27 @@ const DashboardContent = () => {
                 </h1>
             </div>
             <div className="row">
-                <div className="column-12">
-                    <div className="row">
-                        <div 
-                            className="column-4 mt-40 mb-40 p-5" 
-                            style={{ boxShadow: 'var(--monster-shadow), var(--hard-shadow), var(--light-shadow)' }}
-                        ><h2>I'm column 4</h2></div>
 
-                        <div 
-                            className="column-6 mt-40 mb-40 p-5"
-                            style={{ boxShadow: 'var(--monster-shadow), var(--hard-shadow), var(--light-shadow)' }}
-                        ><h2>I'm column 6</h2></div>
-                    </div>
+                <div className="column-2 mt-10 mb-10 p-5" style={boxShadowStyle}>
+                    <h2>I'm column 2</h2>
                 </div>
+
+                <div className="column-3 mt-10 mb-10 p-5" style={boxShadowStyle}>
+                    <h2>I'm column 3</h2>
+                </div>
+
+                <div className="column-6 mt-10 mb-10 p-5" style={boxShadowStyle}>
+                    <h2>I'm column 6</h2>
+                </div>
+                
             </div>
         </>
         
     )
+}
+
+const boxShadowStyle = {
+    boxShadow: 'var(--monster-shadow), var(--hard-shadow), var(--light-shadow)'
 }
 
 export default DashboardContent;
