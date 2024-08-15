@@ -9,6 +9,7 @@ import { FaUnlockKeyhole, FaRegUser, FaAt, FaRightToBracket, FaGoogle } from 're
 import { MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import OuterAppContainer from '../components/OuterAppContainer';
 import { motion } from 'framer-motion';
+import OuterAppHeader from '../partials/OuterAppHeader';
 
 const itemVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -119,11 +120,7 @@ const Signup = () => {
 
     return (
         <OuterAppContainer>
-            <motion.img
-                src="/logo.png"
-                alt="logo image"
-                variants={itemVariants}
-            />
+            <OuterAppHeader />
             <motion.div className="outer-app-box" variants={itemVariants}>
                 <div className="outer-app-box-header">
                     <h1>Sign-up</h1>

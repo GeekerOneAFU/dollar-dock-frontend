@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Vast+Shadow&display=swap');
+
 @font-face {
     font-family: "Tilt Neon";
     src: url("./fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("truetype");
@@ -237,7 +239,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Tilt Neon", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: 0.8px;
 }

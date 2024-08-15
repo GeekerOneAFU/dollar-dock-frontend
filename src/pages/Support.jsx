@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { FaRegStar, FaAt, FaRegUser, FaAnglesRight, FaRegMessage } from 'react-icons/fa6'
 import OuterAppContainer from '../components/OuterAppContainer';
 import { motion } from 'framer-motion';
+import OuterAppHeader from '../partials/OuterAppHeader';
 
 const itemVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -92,11 +93,7 @@ const Support = () => {
 
     return (
         <OuterAppContainer>
-            <motion.img
-                src="/logo.png"
-                alt="logo image"
-                variants={itemVariants}
-            />
+            <OuterAppHeader />
             <motion.div className="outer-app-box" variants={itemVariants}>
                 <div className="outer-app-box-header">
                     <h1>Talk to support</h1>

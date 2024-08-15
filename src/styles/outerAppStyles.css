@@ -5,22 +5,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 75px 0;
     margin: 0;
-    font-family: "Tilt Neon", sans-serif;
+    font-family: "Outfit", sans-serif;
     position: relative;
-}
-
-.outer-app-container img {
-  width: 125px;
-  height: 125px;
-  object-fit: contain;
-  margin: 0 0 -20px 0;
-  padding: 0;
-  z-index: 10;
-  border: none;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
 }
 
 .outer-app-box {
@@ -32,8 +20,8 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
-    margin: 0;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 20px 0;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
